@@ -29,7 +29,7 @@ compile 'com.reyurnible.rxanimation:rxanimations-kotlin:1.0.2'
 ### Simple Usage
 in Java
 
-```
+```java
 TextView textView = (TextView) findViewById(R.id.textView);
 Animation animation = new ScaleAnimation(0.0f, 0.0f, 1.0f, 1.0f);
 RxAnimation.events(animation, textView)
@@ -57,7 +57,7 @@ RxAnimation.events(animation, textView)
 
 in Kotlin
 
-```
+```kotlin
 val view: TextView = findViewById(R.id.textView) as TextView
 val animation: Animation = ScaleAnimation(0.0f, 0.0f, 1.0f, 1.0f)
 animation.bindView(view).subscribe(object : Subscriber<AnimationEvent>() {
@@ -87,7 +87,7 @@ animation.bindView(view).subscribe(object : Subscriber<AnimationEvent>() {
 
 ### Combine Usage
  
-```
+```kotlin
 private fun startAnimations() {
     val alphaAnimation: AlphaAnimation = AlphaAnimation(0.0f, 1.0f)
     alphaAnimation.duration = 3000
